@@ -2,7 +2,7 @@
 GoLang based CLI file sharing software
 #### Install:
 ```
-go install https://github.com/imayberoot/gogo-gigashare
+go install https://github.com/imayberoot/gogo-gigashare@latest
 ```
 
 ## Features
