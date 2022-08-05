@@ -2,7 +2,7 @@
 GoLang based CLI file sharing software
 #### Install:
 ```
-go install https://github.com/imayberoot/ggshare@latest
+go install github.com/imayberoot/ggshare@latest
 ```
 
 ## Features
