@@ -159,7 +159,7 @@ func main() {
 	}
 	close(files)
 
-	// results work group (outputs all the URLs and keys)
+	// big sleep 
 	time.Sleep(1000000000)
 
 }
