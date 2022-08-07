@@ -29,7 +29,7 @@ ggshare -r ~/documents/notporn
 - Embeded TOR upload option using Bine wrapper (this would not be doable on windows so debating doing this, it may just be easier to run torify then add this... (un decided)
 - possibly built in support for other upload services 
 - stdin functionality (shuold be dummy easy to add just pump the "files" channel. 
--download functionality, personally i dont see the need for this but at the same time its like 10 lines of code to add so why not :/ )
+- download functionality, personally i dont see the need for this but at the same time its like 10 lines of code to add so why not :/ )
 
 ### Known issues
 - Encrypted files when decrypted are fucked (basically encryption is jacked up right now, dont mess with it unless you wanna help fix it, pretty sure its due to the tempfile creation and how im choosing to read the file data (os.open vs ioutil.read etc etc) lol) 
