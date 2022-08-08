@@ -1,5 +1,5 @@
 # gogo-gigashare
-GoLang based CLI file sharing software
+GoLang based CLI file sharing script
 #### Install:
 ```
 go install github.com/imayberoot/ggshare@latest
