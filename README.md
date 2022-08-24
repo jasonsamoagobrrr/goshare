@@ -26,7 +26,7 @@ ggshare -r ~/documents/notporn
 ```
 
 ### Coming soon:
-- Socks5 proxy (by default will use tor or mullvad [undecided])
+- Socks5 proxy (by default will use tor or mullvad [undecided, if mullvad will make sure to only select from wireguard])
 - Embeded TOR upload option using Bine wrapper (this would not be doable on windows so debating doing this, it may just be easier to run torify then add this... (un decided)
 - possibly built in support for other upload services (this would mean changing the form title and response data based of selected provider, probably best to add provider classes if we do this)
 - stdin functionality (shuold be dummy easy to add just pump the "files" channel, although I am very tempeted to add an init func based off configurations to then we can better injest/map the files before just running) 
