@@ -27,9 +27,13 @@ ggshare -r ~/documents/notporn
 ### Coming soon:
 - Socks5 proxy (by default will use tor or mullvad [undecided])
 - Embeded TOR upload option using Bine wrapper (this would not be doable on windows so debating doing this, it may just be easier to run torify then add this... (un decided)
-- possibly built in support for other upload services 
-- stdin functionality (shuold be dummy easy to add just pump the "files" channel. 
+- possibly built in support for other upload services (this would mean changing the form title and response data based of selected provider, probably best to add provider classes if we do this)
+- stdin functionality (shuold be dummy easy to add just pump the "files" channel, although I am very tempeted to add an init func based off configurations to then we can better injest/map the files before just running) 
 - download functionality, personally i dont see the need for this but at the same time its like 10 lines of code to add so why not :/ )
+- I may add in a configuration class to then have a default config as well as a few pre-defined configs and better error logging as we need to have services running before the crawling etc begin. (im lazy and probably wont ever do this)
 
 ### Known issues
 - Encrypted files when decrypted are fucked (basically encryption is jacked up right now, dont mess with it unless you wanna help fix it, pretty sure its due to the tempfile creation and how im choosing to read the file data (os.open vs ioutil.read etc etc) lol) 
+
+### why did i make this?
+Mainly to get better at working with files and coding in golang (this is my like 3rd time doing el go). Also have a binary aval that can run on most systems thats ready to dump files fast onto a secure 3rd part. 
