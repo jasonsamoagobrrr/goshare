@@ -1,5 +1,5 @@
 [![Go Report Card](https://goreportcard.com/badge/gojp/goreportcard)](https://goreportcard.com/report/gojp/goreportcard) [![License](https://img.shields.io/github/license/imayberoot/goshare)](https://github.com/imayberoot/goshare/blob/main/LICENSE)
-# gogo-gigashare
+# goshare
 GoLang based CLI file sharing script
 #### Install:
 ```
