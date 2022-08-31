@@ -32,6 +32,7 @@ ggshare -r ~/documents/notporn
 - stdin functionality (shuold be dummy easy to add just pump the "files" channel, although I am very tempeted to add an init func based off configurations to then we can better injest/map the files before just running) 
 - download functionality, personally i dont see the need for this but at the same time its like 10 lines of code to add so why not :/ )
 - I may add in a configuration class to then have a default config as well as a few pre-defined configs and better error logging as we need to have services running before the crawling etc begin. (im lazy and probably wont ever do this)
+- "BIG PUSH protocol" (not raelly a protocol but sounds cool) idea would be to act similarly to AXEL but in a push manner rather that a pull... I dont think its possible but hey, dont let your dreams be memes lol. 
 
 ### Known issues
 - Encrypted files when decrypted are fucked (basically encryption is jacked up right now, dont mess with it unless you wanna help fix it, pretty sure its due to the tempfile creation and how im choosing to read the file data (os.open vs ioutil.read etc etc) lol) 
