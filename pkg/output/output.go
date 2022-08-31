@@ -3,7 +3,8 @@ package output
 package output
 
 import (
-	"github.com/imayberoot/goshare/pkg/goshare"
+	//"github.com/imayberoot/goshare/pkg/goshare"
+	"https://github.com/imayberoot/goshare/tree/devboi/pkg"
 )
 
 func NewOutputProviderByName(name string, conf *goshare.Config) goshare.OutputProvider {

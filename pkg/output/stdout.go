@@ -4,14 +4,13 @@ import (
 	"crypto/md5"
 	"encoding/json"
 	"fmt"
+	"github.com/imayberoot/ggshare/pkg/goshare"
 	"io/ioutil"
 	"os"
 	"path"
 	"strconv"
 	"strings"
 	"time"
-
-	"github.com/imayberoot/goshare/pkg/goshare"
 )
 
 const (
@@ -27,12 +26,12 @@ const (
 )
 
 type Stdoutput struct {
-	config         *goshare.Config
+	config         *goshare2.Config
 	Results        []goshare.Result
 	CurrentResults []goshare.Result
 }
 
-func NewStdoutput(conf *goshare.Config) *Stdoutput {
+func NewStdoutput(conf *goshare2.Config) *Stdoutput {
 	var outp Stdoutput
 	outp.config = conf
 	outp.Results = make([]goshare.Result, 0)
@@ -219,7 +218,7 @@ func (s *Stdoutput) Raw(output string) {
 	fmt.Fprintf(os.Stderr, "%s%s", TERMINAL_CLEAR_LINE, output)
 }
 
-func (s *Stdoutput) writeToAll(filename string, config *goshare.Config, res []goshare.Result) error {
+func (s *Stdoutput) writeToAll(filename string, config *goshare2.Config, res []goshare.Result) error {
 	var err error
 	var BaseFilename string = s.config.OutputFile
 
