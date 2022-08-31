@@ -35,6 +35,8 @@ ggshare -r ~/documents/notporn
 - Encryption package
 - multiple output formats (CSV,HTML,etc)
 - "BIG PUSH protocol" (not really a protocol but sounds cool) idea would be to act similarly to AXEL but in a push manner rather that a pull... I dont think its possible but hey, dont let your dreams be memes lol. 
+- rate limiting
+- progress monitoring
 
 ### Known issues
 - Encrypted files when decrypted are fucked (basically encryption is jacked up right now, dont mess with it unless you wanna help fix it, pretty sure its due to the tempfile creation and how im choosing to read the file data (os.open vs ioutil.read etc etc) lol) 
