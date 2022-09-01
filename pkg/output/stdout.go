@@ -15,23 +15,25 @@ import (
 
 const (
 	BANNER_HEADER = `
-        /'___\  /'___\           /'___\       
-       /\ \__/ /\ \__/  __  __  /\ \__/       
-       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
-        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
-         \ \_\   \ \_\  \ \____/  \ \_\       
-          \/_/    \/_/   \/___/    \/_/       
+ ________  ________  ________  ___  ___  ________  ________  _______      
+|\   ____\|\   __  \|\   ____\|\  \|\  \|\   __  \|\   __  \|\  ___ \     
+\ \  \___|\ \  \|\  \ \  \___|\ \  \\\  \ \  \|\  \ \  \|\  \ \   __/|    
+ \ \  \  __\ \  \\\  \ \_____  \ \   __  \ \   __  \ \   _  _\ \  \_|/__  
+  \ \  \|\  \ \  \\\  \|____|\  \ \  \ \  \ \  \ \  \ \  \\  \\ \  \_|\ \ 
+   \ \_______\ \_______\____\_\  \ \__\ \__\ \__\ \__\ \__\\ _\\ \_______\
+    \|_______|\|_______|\_________\|__|\|__|\|__|\|__|\|__|\|__|\|_______|
+                       \|_________|
 `
 	BANNER_SEP = "________________________________________________"
 )
 
 type Stdoutput struct {
-	config         *goshare2.Config
+	config         *goshare.Config
 	Results        []goshare.Result
 	CurrentResults []goshare.Result
 }
 
-func NewStdoutput(conf *goshare2.Config) *Stdoutput {
+func NewStdoutput(conf *goshare.Config) *Stdoutput {
 	var outp Stdoutput
 	outp.config = conf
 	outp.Results = make([]goshare.Result, 0)
@@ -122,15 +124,6 @@ func (s *Stdoutput) Banner() {
 		printOption([]byte("Delay"), []byte(delay))
 	}
 
-	// Print matchers
-	for _, f := range s.config.MatcherManager.GetMatchers() {
-		printOption([]byte("Matcher"), []byte(f.ReprVerbose()))
-	}
-	// Print filters
-	for _, f := range s.config.MatcherManager.GetFilters() {
-		printOption([]byte("Filter"), []byte(f.ReprVerbose()))
-	}
-	fmt.Fprintf(os.Stderr, "%s\n\n", BANNER_SEP)
 }
 
 // Reset resets the result slice
@@ -218,7 +211,7 @@ func (s *Stdoutput) Raw(output string) {
 	fmt.Fprintf(os.Stderr, "%s%s", TERMINAL_CLEAR_LINE, output)
 }
 
-func (s *Stdoutput) writeToAll(filename string, config *goshare2.Config, res []goshare.Result) error {
+func (s *Stdoutput) writeToAll(filename string, config *goshare.Config, res []goshare.Result) error {
 	var err error
 	var BaseFilename string = s.config.OutputFile
 
