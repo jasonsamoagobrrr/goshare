@@ -44,4 +44,4 @@ ggshare -r ~/documents/notporn
 - file mapping done ineffectivly, would be great if was from a stdin streak but not for a gaurenteed file layout
 
 ### why did i make this?
-Mainly to get better at working with files and coding in golang (this is my like 3rd time doing el go). Also have a binary aval that can run on most systems thats ready to dump files fast onto a secure 3rd part. 
+Mainly to get better at working with files and coding in golang (this is my like 3rd time doing el go). Also have a binary aval that can run on most systems thats ready to dump files fast onto a secure 3rd part. Its practice waht can i say lol.
